@@ -14,3 +14,7 @@ body {
 h1 {
     margin-bottom: 1.5rem;
 }
+
+li {
+    list-style: none;
+}
