@@ -1,5 +1,5 @@
 // Aggiungere elementi nell'array
-const list = [
+const lista = [
     "Pollo",
     "Carciofi",
     "Zucchine",
@@ -10,26 +10,32 @@ const list = [
     "Cereali"
 ];
 
-const listElement = document.querySelector("ul");
+const listaElement = document.querySelector("ul");
 
 // Tramite l'array stampo gli elementi con il ciclo for
 console.log("Gli elementi nel ciclo for sono:")
-for (let i = 0; i < list.length; i++) {
+for (let i = 0; i < lista.length; i++) {
     
-    const element = list[i];
+    const element = lista[i];
     console.log(i, element)
 
-    listElement.innerHTML += `<li>${element}</li>`
+    listaElement.innerHTML += `<li>${element}</li>`
 
 }
 
 console.log("Apro ciclo in while");
 let i = 0;
-while (i < list.length) {
-    const element = list[i];
+while (i < lista.length) {
+    const element = lista[i];
     console.log(i, element);
 
     i++;
 }
 
 console.log("Contatore esistente ancora dopo il while: ", i);
+
+let nuovoComponente = document.getElementById('new').value;
+
+document.getElementById("lista").append("<li>" nuovoComponente "</li>")
+
+listaElement.innerHTML += `<li>${nuovoComponente}</li>`; 
